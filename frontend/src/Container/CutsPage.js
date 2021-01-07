@@ -1,12 +1,11 @@
 import React, {Component} from 'react'
 import Services from './Services'
-import About from '../Pages/About'
+import CarouselSection from '../Pages/CarouselSection'
 import Header from '../components/Header'
+import About from '../Pages/About'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-
-import Favorites from '../components/Favorites'
-
+import FreshCutNavBar from '../components/FreshCutNavBar'
+import LawnRepair from '../Pages/LawnRepair'
 
 const serviceURL = 'http://localhost:3000/services'
 const dealURL = 'http://localhost:3000/deals'
@@ -18,7 +17,6 @@ class CutsPage extends Component {
         deals: [],
         favorites: []
     }
-
 
     componentDidMount(){
         this.getServices()
@@ -71,15 +69,15 @@ class CutsPage extends Component {
         localStorage.clear()
     }
 
-
     render(){
         return (
             <div>
-                <Navbar />
+                <FreshCutNavBar />
                 <Header />
+                <CarouselSection />
                 <About />
+                <LawnRepair />
                 <Services services={this.state.services} addFavorite={this.addFavorite}/>
-                {/* <Favorites favorites={this.state.favorites} /> */}
                 <Footer />
             </div>
         );

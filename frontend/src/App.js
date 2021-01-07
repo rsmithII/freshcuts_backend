@@ -1,14 +1,15 @@
 import './App.css';
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import SignupForm from './Pages/SignupForm'
 import LoginForm from './Pages/LoginForm'
 import Contact from './Pages/Contact';
 
-import Favorites from './components/Favorites'
-
+import Favorites from '../src/components/Favorites'
 import CutsPage from '../src/Container/CutsPage'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const baseUrl = 'http://localhost:3000/'

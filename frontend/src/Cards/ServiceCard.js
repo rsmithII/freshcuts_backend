@@ -1,5 +1,8 @@
 import React from 'react'
 
+import CardDeck from 'react-bootstrap/CardDeck';
+import Card from 'react-bootstrap/Card'
+
 export default function ServiceCard({service, addFavorite, removeFavorite}) {
     const {task, image} = service
 
